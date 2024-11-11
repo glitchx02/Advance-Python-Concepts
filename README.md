@@ -4,48 +4,48 @@
 
 ## Table of Contents
 
-1. **[Asynchronous Programming](https://docs.python.org/3/library/asyncio.html)**  
+1. **[Asynchronous Programming](https://docs.python.org/3/library/asyncio.html)**
+
    - [Asyncio](https://docs.python.org/3/library/asyncio.html), [aiohttp](https://docs.aiohttp.org/en/stable/), [asyncpg](https://magicstack.github.io/asyncpg/)
+2. **[Decorators &amp; Context Managers](https://realpython.com/primer-on-python-decorators/)**
 
-2. **[Decorators & Context Managers](https://realpython.com/primer-on-python-decorators/)**  
    - [Decorators](https://realpython.com/primer-on-python-decorators/), [Context Managers](https://docs.python.org/3/reference/datamodel.html#context-managers)
+3. **[Metaprogramming](https://docs.python.org/3/reference/datamodel.html#metaclasses)**
 
-3. **[Metaprogramming](https://docs.python.org/3/reference/datamodel.html#metaclasses)**  
    - [Metaclasses](https://docs.python.org/3/reference/datamodel.html#metaclasses), [type()](https://docs.python.org/3/library/functions.html#type)
+4. **[Data Classes &amp; Type Hints](https://docs.python.org/3/library/dataclasses.html)**
 
-4. **[Data Classes & Type Hints](https://docs.python.org/3/library/dataclasses.html)**  
    - [Data Classes](https://docs.python.org/3/library/dataclasses.html), [Type Hints](https://www.python.org/dev/peps/pep-0484/), [mypy](https://mypy.readthedocs.io/en/stable/)
+5. **[Advanced OOP](https://realpython.com/python3-object-oriented-programming/)**
 
-5. **[Advanced OOP](https://realpython.com/python3-object-oriented-programming/)**  
    - [OOP Techniques](https://realpython.com/python3-object-oriented-programming/), [Design Patterns](https://refactoring.guru/design-patterns/python)
+6. **[Generators &amp; Iterators](https://docs.python.org/3/howto/functional.html#generators)**
 
-6. **[Generators & Iterators](https://docs.python.org/3/howto/functional.html#generators)**  
    - [Generators](https://docs.python.org/3/howto/functional.html#generators), [Iterators](https://docs.python.org/3/library/stdtypes.html#typeiter)
+7. **[Functional Programming](https://docs.python.org/3/howto/functional.html)**
 
-7. **[Functional Programming](https://docs.python.org/3/howto/functional.html)**  
    - [Functional Programming](https://docs.python.org/3/howto/functional.html), [functools](https://docs.python.org/3/library/functools.html)
+8. **[Testing &amp; TDD](https://realpython.com/python-testing/)**
 
-8. **[Testing & TDD](https://realpython.com/python-testing/)**  
    - [Testing in Python](https://realpython.com/python-testing/), [unittest](https://docs.python.org/3/library/unittest.html), [pytest](https://docs.pytest.org/en/stable/)
+9. **[Concurrency &amp; Parallelism](https://realpython.com/python-concurrency/)**
 
-9. **[Concurrency & Parallelism](https://realpython.com/python-concurrency/)**  
    - [Concurrency vs. Parallelism](https://realpython.com/python-concurrency/), [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html)
+10. **[Networking &amp; Web Dev](https://fastapi.tiangolo.com/)**
 
-10. **[Networking & Web Dev](https://fastapi.tiangolo.com/)**  
     - [FastAPI](https://fastapi.tiangolo.com/), [Django](https://docs.djangoproject.com/en/stable/), [Flask](https://flask.palletsprojects.com/en/stable/)
+11. **[Scalable Systems](https://www.educative.io/courses/grokking-the-system-design-interview)**
 
-11. **[Scalable Systems](https://www.educative.io/courses/grokking-the-system-design-interview)**  
     - [System Design](https://www.educative.io/courses/grokking-the-system-design-interview), [Redis](https://redis.io/documentation), [Kafka](https://kafka.apache.org/documentation/)
+12. **[Data Manipulation](https://pandas.pydata.org/pandas-docs/stable/)**
 
-12. **[Data Manipulation](https://pandas.pydata.org/pandas-docs/stable/)**  
     - [Pandas](https://pandas.pydata.org/pandas-docs/stable/), [NumPy](https://numpy.org/doc/), [Dask](https://docs.dask.org/en/stable/)
+13. **[Security Practices](https://owasp.org/www-project-top-ten/)**
 
-13. **[Security Practices](https://owasp.org/www-project-top-ten/)**  
     - [OWASP Top Ten](https://owasp.org/www-project-top-ten/), [Python Security](https://auth0.com/blog/python-security-best-practices/)
+14. **[Performance Optimization](https://docs.python.org/3/library/profile.html)**
 
-14. **[Performance Optimization](https://docs.python.org/3/library/profile.html)**  
     - [Profiling](https://docs.python.org/3/library/profile.html), [Caching (Redis)](https://redis.io/documentation)
-
 
 ---
 
@@ -56,9 +56,10 @@ With Python’s `asyncio`, you can handle multiple tasks concurrently, improving
 - **Asyncio**: Explore the core `asyncio` library for managing asynchronous events.
   - *Documentation*: [asyncio](https://docs.python.org/3/library/asyncio.html)
   - *Tutorial*: [Intro to Asyncio](https://realpython.com/async-io-python/)
-- **Async Libraries**: Use libraries like `aiohttp` for async HTTP requests and `asyncpg` for PostgreSQL interactions.
+- **Async Libraries**: Use libraries like `aiohttp` for async HTTP requests and `asyncpg` for PostgreSQL interactions, `aiohttp` is a Python library for making asynchronous HTTP requests, allowing non-blocking I/O operations.
 
 Example:
+
 ```python
 import asyncio
 
@@ -83,6 +84,7 @@ Decorators and context managers are powerful tools that simplify resource manage
   - *Example*: `with open("file.txt") as f: ...`
 
 Example:
+
 ```python
 from contextlib import contextmanager
 
@@ -104,6 +106,7 @@ Metaprogramming gives you the ability to manipulate code at runtime. You can cre
 - **Type Manipulation**: Use `type()` and create classes dynamically.
 
 Example:
+
 ```python
 class Meta(type):
     def __new__(cls, name, bases, dct):
@@ -121,6 +124,7 @@ Python’s `dataclasses` make it easy to handle data structures, while type hint
 - **Type Hints**: Use type annotations with `mypy` for type checking.
 
 Example:
+
 ```python
 from dataclasses import dataclass
 
@@ -149,6 +153,7 @@ Generators and iterators make it easy to work with large data sets by yielding v
 - **Iterators**: Create custom iterators with `__iter__()` and `__next__()`.
 
 Example:
+
 ```python
 def generator():
     yield 1
@@ -176,6 +181,7 @@ Master testing frameworks to write reliable, maintainable code.
 - **CI/CD**: Set up automated tests and integrate them into your CI pipeline.
 
 Example:
+
 ```python
 import pytest
 
@@ -193,6 +199,7 @@ Python supports concurrency through threading and parallelism with multiprocessi
 - **Concurrent Futures**: Simplify multithreading and multiprocessing.
 
 Example:
+
 ```python
 from concurrent.futures import ThreadPoolExecutor
 
